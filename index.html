@@ -9,8 +9,10 @@
     <style>
         body{
             min-height: 170vh;
-            background-image: linear-gradient(to top, #58b792 50%, #1c1c1c 20%);
+            background-color: #1c1c1c;
             font-family: "DDG_ProximaNova","DDG_ProximaNova_UI_0","DDG_ProximaNova_UI_1","DDG_ProximaNova_UI_2","DDG_ProximaNova_UI_3","DDG_ProximaNova_UI_4","DDG_ProximaNova_UI_5","DDG_ProximaNova_UI_6","Proxima Nova","Helvetica Neue","Helvetica","Segoe UI","Nimbus Sans L","Liberation Sans","Open Sans",FreeSans,Arial,sans-serif;
+            color: #eeeeee;
+            margin: 0px;
         }
         .material-symbols-outlined {
             color: #cccccc;
@@ -46,6 +48,7 @@
         }
         a:hover{
             text-decoration: underline;
+            cursor: pointer;
         }
         a:visited{
             color: white;
@@ -61,7 +64,7 @@
             border-radius: 5px;
             box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.535);
             right: 110px;
-            top: 50px;
+            top: 43px;
         }
         #expand-notif:hover .content{
             display: flex;
@@ -136,6 +139,87 @@
         .fa-solid.fa-magnifying-glass.fa-xl:hover{
             cursor: pointer;
             color: #eeeeee; 
+        }
+        .badge-link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .badge_svg{
+            margin-right: 5px;
+        }
+        .install-button{
+           background-color: #678fff !important;
+           border-color: #678fff !important;
+           display: flex;
+           box-sizing: border-box;
+           font-weight: 700;
+           color: white;
+           border-radius: 10px;
+           min-height: 44px;
+           align-items: center;
+           justify-content: center;
+           min-width: 280px;
+           margin: 10px;
+           font-size: 15px;
+        }
+        .install-button:hover{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .content-wrapper{
+            display: flex;
+            box-sizing: border-box;
+            justify-content: center;
+            text-align: center;
+            margin-top: 30px;
+            padding: 0 40px;
+        }
+        .content-info{
+            display: flex;
+            box-sizing: border-box;
+            background-color: #282828;
+            border-radius: 18px;
+            padding: 24px;
+            min-height: 332px;
+            width: 332px;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            border: 1px solid #282828;
+        }
+        .content-icon{
+            margin: 20px 20px 32px;
+            height: 72px;
+        }
+        .content-header{
+            font-weight: 300;
+            font-size: 21px;
+            line-height: 27px;
+            margin-bottom: 6px;
+        }
+        .content-info{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .content-info__curve{
+            position: relative;
+            right: 7px;
+            top: -100px;
+            width: 101%;
+            z-index: -1;
+        }
+        .install-button-2{
+            margin-top: 25px;
+            padding: 12px 16px; 
+            font-size: 18px;
+            display: inline-block;
+            background: rgba(0,0,0,0.4); 
+            border-radius: 14px;
         }
     </style>
 </head>
@@ -220,9 +304,77 @@
                 placeholder="Search the web without being tracked">
                 <div><i class="fa-solid fa-magnifying-glass fa-xl"></i></div>  
             </form>   
-            
         </div>
     </div>
+    <div style="color: #eeeeee ; text-align: center; padding: 5px; margin-bottom: 48px;">
+        <h2>Tired of being tracked online? We can help</h2>
+        <p>Get seamless privacy protection on your browser for free with one download:</p>
+        <ol class="badge-link">
+            <li class="badge-link"><svg class="badge_svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="#678FFF"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M4.45723 7.54277C4.0667 7.9333 4.0667 8.56646 4.45723 8.95698L5.88758 10.3873L5.88747 10.3875L6.5432 11.0432C6.95322 11.4532 7.62489 11.4297 8.00519 10.992L11.8251 6.59531C12.1687 6.19989 12.1479 5.60609 11.7775 5.23569C11.3684 4.82668 10.6984 4.85016 10.3191 5.28681L7.20253 8.87386L5.87144 7.54277C5.48092 7.15225 4.84775 7.15225 4.45723 7.54277Z" fill="white"></path></svg>Private Search</li>
+            <li class="badge-link"><svg class="badge_svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="#678FFF"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M4.45723 7.54277C4.0667 7.9333 4.0667 8.56646 4.45723 8.95698L5.88758 10.3873L5.88747 10.3875L6.5432 11.0432C6.95322 11.4532 7.62489 11.4297 8.00519 10.992L11.8251 6.59531C12.1687 6.19989 12.1479 5.60609 11.7775 5.23569C11.3684 4.82668 10.6984 4.85016 10.3191 5.28681L7.20253 8.87386L5.87144 7.54277C5.48092 7.15225 4.84775 7.15225 4.45723 7.54277Z" fill="white"></path></svg>Tracker Blocking</li>
+            <li class="badge-link"><svg class="badge_svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="#678FFF"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M4.45723 7.54277C4.0667 7.9333 4.0667 8.56646 4.45723 8.95698L5.88758 10.3873L5.88747 10.3875L6.5432 11.0432C6.95322 11.4532 7.62489 11.4297 8.00519 10.992L11.8251 6.59531C12.1687 6.19989 12.1479 5.60609 11.7775 5.23569C11.3684 4.82668 10.6984 4.85016 10.3191 5.28681L7.20253 8.87386L5.87144 7.54277C5.48092 7.15225 4.84775 7.15225 4.45723 7.54277Z" fill="white"></path></svg>Site Encryption</li>
+        </ol>
+        <div style="display: flex; justify-content: center;">
+            <a class="install-button">Install DuckDuckGo for Windows</a>
+            <a class="install-button">Add DuckDuckGo to Chrome</a>
+        </div>
+        <p style="font-size: 12px;">Trusted by tens of millions worldwide!</p>
+    </div>
+    <div style="text-align: center; font-weight: 300;">Privacy Protection For Any Device</div>
+    <div id="content-info-title">
+        <div class="content-wrapper">
+            <div class="content-info">
+                <img class="content-icon" src="resources/laptop.svg">
+                <div class="content-header"style="font-weight: 300;">Privacy for Chrome</div>
+                <div class="content-desc">
+                    <div>Browse as usual, and we'll take care of the rest. We bundled our search engine, tracker blocker, and encryption enforcer into one </div>
+                    <a style="color: #678FFF;">Chrome Extension.</a>
+                </div>
+            </div>    
+            <div class="content-info">
+                <img class="content-icon" src="resources/search.svg">
+                <div class="content-header"style="font-weight: 300;">Private Search Engine</div>
+                <div class="content-desc">
+                    <div>Search privately with our app or extension, add private web search to your favorite browser, or search directly at </div>
+                    <a style="color: #678FFF;">duckduckgo.com.</a>
+                </div>
+            </div>     
+            <div class="content-info">
+                <img class="content-icon" src="resources/mobile.svg">
+                <div class="content-header"style="font-weight: 300;">Privacy Browser App</div>
+                <div class="content-desc">
+                    <div>Our private browser for mobile comes equipped with our search engine, tracker blocker, encryption enforcer, and more. Available on </div>
+                    <a style="color: #678FFF;">iOS & Android.</a>
+                </div>  
+            </div>            
+        </div>
+    </div> 
+    <div class="content-info__curve">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1438 134"><path d="M1438 1442H0V31.001S438.105 0 719 .001c280.896 0 719 31 719 31V1442z" fill="currentColor" style="color: #58b792"></path></svg>   
+    </div>
+    <div class="second-half">
+        <div class="on-board" style="text-align: center; line-height: 27px;">
+            <h1 style="font-size: 24px; margin-top: 16px;">We Don't Store your
+                <br> personal information. Ever.
+            </h1>
+            <p>Our privacy policy is simple: we don't collect
+                <br>
+                or share any of your personal information
+            </p>
+            <div class="install-button-2"><a>Install DuckDuckGo</a></div>
+        </div>     
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <img src="resources/1-monster-v2--pre-animation.svg" width="1200">
+    </div> 
+    <div style="
+    background-color: #58b792; 
+    box-sizing: border-box; 
+    position: absolute;
+    width: 1503px;
+    height: 877px;
+    top: 1000px;
+    z-index: -1;"></div>
     
 </body>
 </html>
